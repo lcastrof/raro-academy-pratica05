@@ -9,5 +9,10 @@ import { KeyAndValue } from "../../types/keyAndValue";
  * @returns 
  */
 export const fromPairs = (args: KeyAndValue[]): Record<string, unknown> => {
-  return null;
+  const objetoFinal = args.reduce((acc, [chave, valor]) => {
+    // atribuindo chave e valor ao objeto inicial do reduce
+    acc[chave] = valor;
+    return acc;
+  }, {});
+  return objetoFinal;
 };
