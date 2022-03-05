@@ -8,5 +8,9 @@
  * @returns somente os itens definidos.
  */
 export const uniq = <T>(args: T[]): T[] => {
-  return null;
+  const arrayFiltrado = [];
+  args.forEach((item) => {
+    if (!arrayFiltrado.includes(item)) arrayFiltrado.push(item);
+  });
+  return arrayFiltrado;
 };
