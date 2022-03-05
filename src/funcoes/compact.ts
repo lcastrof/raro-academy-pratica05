@@ -9,5 +9,6 @@
  * @returns somente os itens definidos.
  */
  export const compact = (items: unknown[]): unknown[] => {
-  return null;
+   const itensFiltrados = items.filter((item) => !!item);
+  return itensFiltrados;
 };
