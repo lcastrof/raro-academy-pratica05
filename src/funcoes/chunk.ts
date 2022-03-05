@@ -12,5 +12,10 @@
  * @returns 
  */
 export const chunk = (valores: number[], tamanho: number): number[][] => {
-  return null;
+  const novoArray = [];
+  for (let i = 0; i < valores.length; i += tamanho) {
+    const subArray = valores.slice(i, i+tamanho);
+    novoArray.push(subArray);
+  }
+  return novoArray;
 };
